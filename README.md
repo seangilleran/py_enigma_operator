@@ -12,12 +12,16 @@ pip install py-enigma-operator
 Messages are encoded along with their encrypted message keys and with their transmitting operator's random _grundstellung_. Both transmitter and reciever must have the same code book, and the reciever must know on what day the message was encoded. (Assuming, of course, the reciever does not have access to a Bombe!)
 
 ```python
+from enigma_operator import EnigmaOperator
+
 e = EnigmaOperator('/path/to/key/sheet/file')
 plaintext = 'THEXRUSSIANSXAREXCOMINGX'
 ciphertext = e.encrypt(plaintext)
 ```
 
 ```python
+from enigma_operator import EnigmaOperator
+
 e = EnigmaOperator('/path/to/key/sheet/file')
 ciphertext = 'XIWIJXIJWOZLCKFMEMNGNEIAIJLBO'
 plaintext = e.decrypt(ciphertext)
@@ -26,7 +30,9 @@ plaintext = e.decrypt(ciphertext)
 You can also use ```EnigmaOperator``` to generate a code book. Once you do, make sure all of your recievers have a copy!
 
 ```python
-EnigmaOperator.random_codebuch('path/to/key/sheet/file')
+from enigma_operator import random_codebuch
+
+random_codebuch('path/to/key/sheet/file')
 ```
 
 Have fun!
