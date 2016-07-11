@@ -1,2 +1,3 @@
-# py_enigma_operator
-Wrapper for py-enigma with encode/decode helpers &amp; key sheet creation.
+# Enigma Operator
+
+Wrapper for py-enigma encode/decode. Also provides tools for creating key sheets and code books. For more info and for documentation, see py-enigma, here: https://bitbucket.org/bgneal/enigma/
